@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://elifdemir.vercel.app'),
+  metadataBase: new URL('https://minimalist-portfolio-site-six.vercel.app'),
 
   title: {
     default:  'Elif Demir | Dijital Ürün Tasarımcısı & Sistem Mimarisi',
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title:       'Elif Demir | Dijital Ürün Tasarımcısı & Sistem Mimarisi',
     description: 'Modern web teknolojileri, UI/UX tasarımı ve sistem mimarisi odaklı kişisel portfolyo.',
-    url:         'https://elifdemir.vercel.app',
+    url:         'https://minimalist-portfolio-site-six.vercel.app',
     siteName:    'Elif Demir Portfolio',
     locale:      'tr_TR',
     type:        'website',
