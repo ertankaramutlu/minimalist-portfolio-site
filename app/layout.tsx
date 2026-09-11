@@ -1,4 +1,5 @@
-import { Analytics } from '@vercel/analytics/next'
+import { Analytics } from '@vercel/analytics/react'
+import { SpeedInsights } from '@vercel/speed-insights/next'
 import type { Metadata, Viewport } from 'next'
 import { Geist, Geist_Mono } from 'next/font/google'
 import { ThemeProvider } from '@/components/theme-provider'
@@ -80,6 +81,15 @@ export const viewport: Viewport = {
   ],
 }
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: 'Elif Demir',
+  url: 'https://minimalist-portfolio-site-six.vercel.app',
+  jobTitle: 'Dijital Ürün Tasarımcısı & Sistem Mimarisi',
+  knowsAbout: ['UI/UX Design', 'Webflow', 'Next.js', 'Figma', 'System Architecture'],
+}
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -99,8 +109,13 @@ export default function RootLayout({
           disableTransitionOnChange={false}
         >
           {children}
-          {process.env.NODE_ENV === 'production' && <Analytics />}
+          <Analytics />
+          <SpeedInsights />
         </ThemeProvider>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
       </body>
     </html>
   )
