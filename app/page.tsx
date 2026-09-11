@@ -12,6 +12,7 @@ import { ScrollTop } from '@/components/scroll-top'
 export default function Page() {
   return (
     <>
+      <div id="top-of-page" />
       <ScrollTop />
       <IntroOverlay />
       <ScrollProgress />

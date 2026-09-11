@@ -14,45 +14,57 @@ const geistMono = Geist_Mono({
   variable: '--font-geist-mono',
 })
 
-const SITE_URL  = process.env.NEXT_PUBLIC_SITE_URL ?? 'http://localhost:3000'
-const SITE_NAME = 'Elif Demir'
-const DEFAULT_DESCRIPTION =
-  'Elif Demir, sade ve amaca yönelik dijital ürünler tasarlayan bir ürün tasarımcısı ve geliştiricisi. Seçili işler, hakkında ve iletişim.'
-
 export const metadata: Metadata = {
-  metadataBase: new URL(SITE_URL),
+  metadataBase: new URL('https://elifdemir.vercel.app'),
+
   title: {
-    default:  `${SITE_NAME} — Ürün Tasarımcısı & Geliştirici`,
-    template: `%s | ${SITE_NAME}`,
+    default:  'Elif Demir | Dijital Ürün Tasarımcısı & Sistem Mimarisi',
+    template: '%s | Elif Demir',
   },
-  description: DEFAULT_DESCRIPTION,
-  generator: 'Next.js',
+
+  description:
+    'Modern web teknolojileri, UI/UX tasarımı ve sistem mimarisi odaklı kişisel portfolyo.',
+
+  keywords: ['Web Tasarım', 'Next.js', 'UI/UX', 'Figma', 'Webflow', 'Sistem Mimarisi'],
+
+  authors: [{ name: 'Elif Demir' }],
+
   openGraph: {
-    type:        'website',
+    title:       'Elif Demir | Dijital Ürün Tasarımcısı & Sistem Mimarisi',
+    description: 'Modern web teknolojileri, UI/UX tasarımı ve sistem mimarisi odaklı kişisel portfolyo.',
+    url:         'https://elifdemir.vercel.app',
+    siteName:    'Elif Demir Portfolio',
     locale:      'tr_TR',
-    url:         SITE_URL,
-    siteName:    SITE_NAME,
-    title:       `${SITE_NAME} — Ürün Tasarımcısı & Geliştirici`,
-    description: DEFAULT_DESCRIPTION,
+    type:        'website',
+    images: [
+      {
+        url:    '/og-image.png',
+        width:  1200,
+        height: 630,
+        alt:    'Elif Demir Portfolio OpenGraph Image',
+      },
+    ],
   },
+
   twitter: {
     card:        'summary_large_image',
-    site:        '@elifdemir',
-    title:       `${SITE_NAME} — Ürün Tasarımcısı & Geliştirici`,
-    description: DEFAULT_DESCRIPTION,
+    title:       'Elif Demir | Dijital Ürün Tasarımcısı & Sistem Mimarisi',
+    description: 'Modern web teknolojileri, UI/UX tasarımı ve sistem mimarisi odaklı kişisel portfolyo.',
+    images:      ['/og-image.png'],
   },
+
   icons: {
     icon: [
       {
-        url: '/icon-light-32x32.png',
+        url:   '/icon-light-32x32.png',
         media: '(prefers-color-scheme: light)',
       },
       {
-        url: '/icon-dark-32x32.png',
+        url:   '/icon-dark-32x32.png',
         media: '(prefers-color-scheme: dark)',
       },
       {
-        url: '/icon.svg',
+        url:  '/icon.svg',
         type: 'image/svg+xml',
       },
     ],
@@ -79,7 +91,7 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable}`}
       suppressHydrationWarning
     >
-      <body className="bg-background font-sans antialiased">
+      <body id="top" className="bg-background font-sans antialiased">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
