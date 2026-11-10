@@ -52,7 +52,7 @@ export function IntroOverlay() {
       )}
     >
       <span className="absolute top-8 left-1/2 -translate-x-1/2 font-mono text-xs uppercase tracking-[0.4em] text-background/50">
-        Elif Demir
+        Ertan Karamutlu
       </span>
       <div className="overflow-hidden">
         <span
