@@ -46,7 +46,7 @@ export function Hero() {
           className="animate-rise mt-8 max-w-md text-pretty text-base leading-relaxed text-muted-foreground sm:text-lg"
           style={{ animationDelay: '640ms' }}
         >
-          Ben Elif. Beş yıldır fikirleri; net, erişilebilir ve iyi
+          Ben Ertan. Beş yıldır fikirleri; net, erişilebilir ve iyi
           çalışan dijital deneyimlere dönüştürüyorum.
         </p>
       </div>

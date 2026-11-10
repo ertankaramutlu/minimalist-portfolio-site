@@ -1,7 +1,8 @@
 import Image from 'next/image'
+import Link from 'next/link'
 import { Reveal } from '@/components/reveal'
 
-type Project = {
+export type Project = {
   name: string
   role: string
   year: string
@@ -9,7 +10,7 @@ type Project = {
   tags: string[]
 }
 
-const PROJECTS: Project[] = [
+export const PROJECTS: Project[] = [
   {
     name: 'Meridian',
     role: 'Fintech kontrol paneli',
@@ -38,9 +39,41 @@ const PROJECTS: Project[] = [
     image: '/work/form-field.png',
     tags: ['Web', 'Sanat Yönetimi'],
   },
+  {
+    name: 'Lumina',
+    role: 'E-ticaret arayüzü',
+    year: '2025',
+    image: '/work/meridian.png',
+    tags: ['E-ticaret', 'Next.js'],
+  },
+  {
+    name: 'Nebula',
+    role: 'Sağlık takip uygulaması',
+    year: '2025',
+    image: '/work/atlas.png',
+    tags: ['Mobil', 'Sağlık'],
+  },
+  {
+    name: 'Obsidian',
+    role: 'Kripto cüzdan arayüzü',
+    year: '2024',
+    image: '/work/sonder.png',
+    tags: ['Fintech', 'Web3'],
+  },
+  {
+    name: 'Aether',
+    role: 'Çalışma ve üretkenlik aracı',
+    year: '2024',
+    image: '/work/form-field.png',
+    tags: ['SaaS', 'Üretkenlik'],
+  },
 ]
 
+const DISPLAY_LIMIT = 4
+
 export function Work() {
+  const visible = PROJECTS.slice(0, DISPLAY_LIMIT)
+
   return (
     <section id="work" className="border-t border-border px-6 py-24 sm:py-32">
       <div className="mx-auto max-w-6xl">
@@ -49,12 +82,12 @@ export function Work() {
             02 — Seçili İşler
           </span>
           <span className="font-mono text-xs text-muted-foreground">
-            {PROJECTS.length} proje
+            {visible.length} proje
           </span>
         </Reveal>
 
         <div className="grid gap-x-8 gap-y-16 sm:grid-cols-2">
-          {PROJECTS.map((project, i) => (
+          {visible.map((project, i) => (
             <Reveal key={project.name} delay={(i % 2) * 100}>
               <a href="#contact" className="group block">
                 <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border bg-secondary">
@@ -91,6 +124,15 @@ export function Work() {
               </a>
             </Reveal>
           ))}
+        </div>
+
+        <div className="mt-16 flex justify-center">
+          <Link
+            href="/works"
+            className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-6 py-3 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+          >
+            Tüm İşleri Gör →
+          </Link>
         </div>
       </div>
     </section>

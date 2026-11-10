@@ -19,8 +19,8 @@ export const metadata: Metadata = {
   metadataBase: new URL('https://minimalist-portfolio-site-six.vercel.app'),
 
   title: {
-    default:  'Elif Demir | Dijital Ürün Tasarımcısı & Sistem Mimarisi',
-    template: '%s | Elif Demir',
+    default:  'Ertan Karamutlu | Dijital Ürün Tasarımcısı & Sistem Mimarisi',
+    template: '%s | Ertan Karamutlu',
   },
 
   description:
@@ -28,13 +28,13 @@ export const metadata: Metadata = {
 
   keywords: ['Web Tasarım', 'Next.js', 'UI/UX', 'Figma', 'Webflow', 'Sistem Mimarisi'],
 
-  authors: [{ name: 'Elif Demir' }],
+  authors: [{ name: 'Ertan Karamutlu' }],
 
   openGraph: {
-    title:       'Elif Demir | Dijital Ürün Tasarımcısı & Sistem Mimarisi',
+    title:       'Ertan Karamutlu | Dijital Ürün Tasarımcısı & Sistem Mimarisi',
     description: 'Modern web teknolojileri, UI/UX tasarımı ve sistem mimarisi odaklı kişisel portfolyo.',
     url:         'https://minimalist-portfolio-site-six.vercel.app',
-    siteName:    'Elif Demir Portfolio',
+    siteName:    'Ertan Karamutlu Portfolio',
     locale:      'tr_TR',
     type:        'website',
     images: [
@@ -42,14 +42,14 @@ export const metadata: Metadata = {
         url:    '/og-image.png',
         width:  1200,
         height: 630,
-        alt:    'Elif Demir Portfolio OpenGraph Image',
+        alt:    'Ertan Karamutlu Portfolio OpenGraph Image',
       },
     ],
   },
 
   twitter: {
     card:        'summary_large_image',
-    title:       'Elif Demir | Dijital Ürün Tasarımcısı & Sistem Mimarisi',
+    title:       'Ertan Karamutlu | Dijital Ürün Tasarımcısı & Sistem Mimarisi',
     description: 'Modern web teknolojileri, UI/UX tasarımı ve sistem mimarisi odaklı kişisel portfolyo.',
     images:      ['/og-image.png'],
   },
@@ -84,7 +84,7 @@ export const viewport: Viewport = {
 const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'Person',
-  name: 'Elif Demir',
+  name: 'Ertan Karamutlu',
   url: 'https://minimalist-portfolio-site-six.vercel.app',
   jobTitle: 'Dijital Ürün Tasarımcısı & Sistem Mimarisi',
   knowsAbout: ['UI/UX Design', 'Webflow', 'Next.js', 'Figma', 'System Architecture'],

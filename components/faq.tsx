@@ -23,7 +23,7 @@ const ITEMS = [
   {
     question: 'Uzaktan çalışıyor musun ve nasıl iletişime geçilir?',
     answer:
-      'Evet, İstanbul merkezli olarak uzaktan çalışıyorum. Kısa bir e-posta yeterli: merhaba@elifdemir.com adresine projenin özeti ve zaman çizelgesini yazman yeterli.',
+      'Evet, İstanbul merkezli olarak uzaktan çalışıyorum. Kısa bir e-posta yeterli: merhaba@ertankaramutlu.com adresine projenin özeti ve zaman çizelgesini yazman yeterli.',
   },
 ]
 

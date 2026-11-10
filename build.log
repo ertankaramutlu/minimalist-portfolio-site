@@ -1,0 +1,33 @@
+
+> my-project@0.1.0 build
+> next build
+
+▲ Next.js 16.3.3 (Turbopack)
+✓ Running next.config.mjs took 18ms
+
+  Creating an optimized production build ...
+✓ Compiled successfully in 28.7s
+  Skipping validation of types
+  Finished TypeScript config validation in 6ms ...
+  Collecting page data using 15 workers ...
+Error: Failed to collect configuration for /blog
+    at ignore-listed frames {
+  [cause]: Error: NEXT_PUBLIC_SANITY_DATASET tanımlı değil. .env.local dosyasını kontrol et.
+      at b$ (sanity/env.ts:16:11)
+      at module evaluation (sanity/env.ts:4:24)
+      at module evaluation (app/blog/page.tsx:2:1)
+      at module evaluation (app/blog/page.tsx:14:27)
+    14 | function assertValue<T>(value: T | undefined, errorMessage: string): T {
+    15 |   if (value === undefined) {
+  > 16 |     throw new Error(errorMessage)
+       |           ^
+    17 |   }
+    18 |
+    19 |   return value
+}
+
+> Build error occurred
+Error: Failed to collect page data for /blog
+    at ignore-listed frames {
+  type: 'Error'
+}

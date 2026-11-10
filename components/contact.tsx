@@ -3,10 +3,10 @@ import { ContactForm } from '@/components/contact-form'
 import { Reveal } from '@/components/reveal'
 
 const SOCIALS = [
-  { label: 'E-posta', value: 'merhaba@elifdemir.com', href: 'mailto:merhaba@elifdemir.com' },
-  { label: 'LinkedIn', value: '/in/elifdemir', href: '#' },
-  { label: 'GitHub', value: '@elifdemir', href: '#' },
-  { label: 'Dribbble', value: '@elifdemir', href: '#' },
+  { label: 'E-posta', value: 'merhaba@ertankaramutlu.com', href: 'mailto:merhaba@ertankaramutlu.com' },
+  { label: 'LinkedIn', value: '/in/ertankaramutlu', href: '#' },
+  { label: 'GitHub', value: '@ertankaramutlu', href: '#' },
+  { label: 'Dribbble', value: '@ertankaramutlu', href: '#' },
 ]
 
 const MARQUEE = 'Birlikte çalışalım'
@@ -65,7 +65,7 @@ export function Contact() {
         </div>
 
         <div className="mt-20 flex flex-col items-start justify-between gap-6 border-t border-border pt-8 font-mono text-xs uppercase tracking-widest text-muted-foreground sm:flex-row sm:items-center">
-          <span>© {new Date().getFullYear()} Elif Demir</span>
+          <span>© {new Date().getFullYear()} Ertan Karamutlu</span>
 
           {/* Hızlı menü */}
           <nav aria-label="Alt bilgi menüsü">

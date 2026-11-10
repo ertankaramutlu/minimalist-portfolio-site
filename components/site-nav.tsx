@@ -46,7 +46,7 @@ export function SiteNav() {
           href="/#top"
           className="font-mono text-sm font-medium tracking-tight"
         >
-          Elif Demir<span className="text-primary">.</span>
+          Ertan Karamutlu<span className="text-primary">.</span>
         </Link>
 
         <ul className="flex items-center gap-3 sm:gap-4">
