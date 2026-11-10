@@ -10,7 +10,16 @@ export const metadata: Metadata = {
   description: 'Ertan Karamutlu tarafından yürütülen tüm projeler.',
 }
 
-export default function WorksPage() {
+const PAGE_SIZE = 9
+
+export default function WorksPage({ searchParams }: { searchParams: { page?: string } }) {
+  const currentPage = Math.max(parseInt(searchParams.page ?? '1', 10), 1)
+  const totalPages = Math.ceil(PROJECTS.length / PAGE_SIZE)
+  const paginated = PROJECTS.slice((currentPage - 1) * PAGE_SIZE, currentPage * PAGE_SIZE)
+
+  const hasPrev = currentPage > 1
+  const hasNext = currentPage < totalPages
+
   return (
     <>
       <SiteNav />
@@ -29,7 +38,7 @@ export default function WorksPage() {
           </Reveal>
 
           <div className="grid gap-x-8 gap-y-16 sm:grid-cols-2 lg:grid-cols-3">
-            {PROJECTS.map((project, i) => (
+            {paginated.map((project, i) => (
               <Reveal key={project.name} delay={i * 40}>
                 <a href="#contact" className="group block">
                   <div className="relative aspect-[4/3] overflow-hidden rounded-lg border border-border bg-secondary">
@@ -68,7 +77,32 @@ export default function WorksPage() {
             ))}
           </div>
 
-          <div className="mt-20 flex justify-center">
+          {/* Sayfalama */}
+          <div className="mt-20 flex items-center justify-between px-6 sm:px-0">
+            {hasPrev ? (
+              <Link
+                href={`/works?page=${currentPage - 1}`}
+                className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-6 py-3 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              >
+                ← Önceki
+              </Link>
+            ) : null}
+
+            <span className="hidden sm:inline-block font-mono text-xs uppercase tracking-widest text-muted-foreground">
+              Sayfa {currentPage} / {totalPages}
+            </span>
+
+            {hasNext ? (
+              <Link
+                href={`/works?page=${currentPage + 1}`}
+                className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-6 py-3 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"
+              >
+                Sonraki →
+              </Link>
+            ) : null}
+          </div>
+
+          <div className="mt-16 flex justify-center">
             <Link
               href="/"
               className="inline-flex items-center gap-2 rounded-lg border border-border bg-background px-6 py-3 font-mono text-xs uppercase tracking-widest text-muted-foreground transition-colors hover:bg-secondary hover:text-foreground"

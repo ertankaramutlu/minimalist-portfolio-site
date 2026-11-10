@@ -67,6 +67,27 @@ export const PROJECTS: Project[] = [
     image: '/work/form-field.png',
     tags: ['SaaS', 'Üretkenlik'],
   },
+  {
+    name: 'Vertex',
+    role: 'Mobilya markası sitesi',
+    year: '2023',
+    image: '/work/form-field.png',
+    tags: ['Marka', 'Web'],
+  },
+  {
+    name: 'Prism',
+    role: 'Finansal planlama uygulaması',
+    year: '2023',
+    image: '/work/sonder.png',
+    tags: ['Fintech', 'Mobil'],
+  },
+  {
+    name: 'Zenith',
+    role: 'Portfolio vemarka kimliği',
+    year: '2022',
+    image: '/work/atlas.png',
+    tags: ['Marka', 'Tasarım Sistemi'],
+  },
 ]
 
 const DISPLAY_LIMIT = 4
